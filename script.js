@@ -37,8 +37,14 @@ $('#run-search').on('click', function(){
 
   queryTerm = $("#search-term").val().trim();
   console.log(queryTerm);
+
+  // Add in the search term
   var newURL = queryURLBase + "&q=" + queryTerm;
   console.log(newURL);
+
+  // Get the number of records
+
+  // Get the start year and year
 
   //Send the ajax call the newly assembled URL
   runQuery(10, newURL );
