@@ -41,7 +41,7 @@ $('#run-search').on('click', function(){
   console.log(newURL);
 
   //Send the ajax call the newly asse,bled URL
-  runQuery(10, );
+  runQuery(10, newURL );
 
   return false;
 });
