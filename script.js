@@ -1,4 +1,5 @@
 //Setup Variables
+//------------------------------------------------------------
 var authkey = "6fd70e5d37284789ac71be5cb99c1f29";
 
 //Search Parameters
@@ -15,11 +16,20 @@ var queryURLBase = "http://api.nytimes.com/svc/search/v2/articlesearch.json?" + 
 var articleCounter = 0;
 
 //Functions
+//------------------------------------------------------------
 
-
+function runQuery(numArticles, queryURL){
+    //Ajax Function
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(NYTData){
+      console.log(NYTData);
+    });
+};
 
 //Main Process
-//------------------------------
+//------------------------------------------------------------
 
 //1. Retrive user inputs and convert to Variables
 //2. Use those variables to run an ajax call to the NYTIMES
