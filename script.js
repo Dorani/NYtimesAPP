@@ -1,6 +1,6 @@
 //Setup Variables
 //------------------------------------------------------------
-var authkey = "6fd70e5d37284789ac71be5cb99c1f29";
+var authKey = "6fd70e5d37284789ac71be5cb99c1f29";
 
 //Search Parameters
 var queryTerm  = "";
@@ -10,7 +10,7 @@ var endYear    = 0;
 
 //URL BASE
 
-var queryURLBase = "http://api.nytimes.com/svc/search/v2/articlesearch.json?" + "api-key=" + authKey;
+var queryURLBase = "http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey;
 
 //Variable to track number of articles
 var articleCounter = 0;
@@ -25,11 +25,22 @@ function runQuery(numArticles, queryURL){
       method: "GET"
     }).done(function(NYTData){
       console.log(NYTData);
-    });
+    })
+
 };
 
 //Main Process
 //------------------------------------------------------------
+
+$('#run-search').on('click', function(){
+  alert("test");
+  runQuery(10, "http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=6fd70e5d37284789ac71be5cb99c1f29&q=Obama");
+
+  return false;
+});
+
+
+
 
 //1. Retrive user inputs and convert to Variables
 //2. Use those variables to run an ajax call to the NYTIMES
