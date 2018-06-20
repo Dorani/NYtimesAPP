@@ -45,6 +45,10 @@ $('#run-search').on('click', function(){
   // Get the number of records
 
   // Get the start year and year
+  startYear = $('#start-year').val().trim();
+  endYear = $('#end-year').val().trim();
+
+  newUrl = newURL + "&begin_date=" + startYear + "&end_date=" + endYear;
 
   //Send the ajax call the newly assembled URL
   runQuery(10, newURL );
