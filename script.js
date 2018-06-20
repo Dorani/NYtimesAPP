@@ -34,7 +34,13 @@ function runQuery(numArticles, queryURL){
 
 $('#run-search').on('click', function(){
   alert("test");
-  runQuery(10, "http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=6fd70e5d37284789ac71be5cb99c1f29&q=Obama");
+
+  queryTerm = $("#search-term").val().trim();
+  console.log(queryTerm);
+  var newURL = queryURLBase + "&q=" + queryTerm;
+  console.log(newURL);
+
+  //runQuery(10, );
 
   return false;
 });
