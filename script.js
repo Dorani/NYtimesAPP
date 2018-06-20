@@ -40,7 +40,8 @@ $('#run-search').on('click', function(){
   var newURL = queryURLBase + "&q=" + queryTerm;
   console.log(newURL);
 
-  //runQuery(10, );
+  //Send the ajax call the newly asse,bled URL
+  runQuery(10, );
 
   return false;
 });
