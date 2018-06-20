@@ -40,7 +40,7 @@ $('#run-search').on('click', function(){
   var newURL = queryURLBase + "&q=" + queryTerm;
   console.log(newURL);
 
-  //Send the ajax call the newly asse,bled URL
+  //Send the ajax call the newly assembled URL
   runQuery(10, newURL );
 
   return false;
