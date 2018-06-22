@@ -45,13 +45,17 @@ $('#run-search').on('click', function(){
   // Get the number of records
 
   // Get the start year and year
-  startYear = $('#start-year').val().trim();
-  endYear = $('#end-year').val().trim();
+  startYear = $("#start").val().trim() + "0101";
+  endYear = $("#end").val().trim() + "0101";
+  console.log(startYear);
+  console.log(endYear);
 
-  newUrl = newURL + "&begin_date=" + startYear + "&end_date=" + endYear;
+  // Add the date information to the URL
+  newURL = newURL + "&begin_date=" + startYear + "&end_date=" + endYear;
+  console.log(newURL);
 
   //Send the ajax call the newly assembled URL
-  runQuery(10, newURL );
+  runQuery(10, newURL);
 
   return false;
 });
