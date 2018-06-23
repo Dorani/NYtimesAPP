@@ -45,8 +45,8 @@ $('#run-search').on('click', function(){
   // Get the number of records
 
   // Get the start year and year
-  startYear = $("#start").val().trim() + "0101";
-  endYear = $("#end").val().trim() + "0101";
+  startYear = $("#start-year").val().trim() + "0101";
+  endYear = $("#end-year").val().trim() + "1231";
   console.log(startYear);
   console.log(endYear);
 
